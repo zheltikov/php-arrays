@@ -4,8 +4,51 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "64c618808b2bd15ddbb6930b00859c93",
-    "packages": [],
+    "content-hash": "ab0d429f92510791f9c602d5baafce64",
+    "packages": [
+        {
+            "name": "zheltikov/php-exceptions",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/zheltikov/php-exceptions.git",
+                "reference": "b346ae65c32144f741cfffa8e9e00eb7b1c4f3d1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/zheltikov/php-exceptions/zipball/b346ae65c32144f741cfffa8e9e00eb7b1c4f3d1",
+                "reference": "b346ae65c32144f741cfffa8e9e00eb7b1c4f3d1",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.3"
+            },
+            "require-dev": {
+                "nazar-pc/phpt-tests-runner": "^1.4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Zheltikov\\Exceptions\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Max Zheltikov",
+                    "homepage": "https://github.com/zheltikov"
+                }
+            ],
+            "support": {
+                "issues": "https://github.com/zheltikov/php-exceptions/issues",
+                "source": "https://github.com/zheltikov/php-exceptions/tree/1.0.0"
+            },
+            "time": "2021-07-13T09:24:39+00:00"
+        }
+    ],
     "packages-dev": [
         {
             "name": "nazar-pc/phpt-tests-runner",
