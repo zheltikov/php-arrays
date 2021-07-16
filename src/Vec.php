@@ -4,6 +4,7 @@ namespace Zheltikov\Arrays;
 
 use InvalidArgumentException;
 use OutOfBoundsException;
+use Zheltikov\Exceptions\InvalidOperationException;
 
 /**
  * Class Vec
