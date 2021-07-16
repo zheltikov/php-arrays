@@ -12,7 +12,6 @@
   },
   "require": {
     "php": "^7.4",
-    "ext-json": "*",
     "zheltikov/php-exceptions": "^1.0"
   },
   "require-dev": {
