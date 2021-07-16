@@ -22,9 +22,9 @@ final class Dict implements AnyArray
     private $current_key = null;
 
     /**
-     * @var int
+     * @var int|null
      */
-    private int $count = 0;
+    private ?int $count = null;
 
     /**
      * Dict constructor.
@@ -97,7 +97,7 @@ final class Dict implements AnyArray
     {
         if ($offset === null) {
             $this->array[] = $value;
-            $this->count++;
+            $this->count = null;
             return;
         }
 
@@ -107,10 +107,8 @@ final class Dict implements AnyArray
             );
         }
 
-        if (!$this->offsetExists($offset)) {
-            $this->count++;
-        }
         $this->array[$offset] = $value;
+        $this->count = null;
     }
 
     /**
@@ -124,10 +122,8 @@ final class Dict implements AnyArray
             );
         }
 
-        if ($this->offsetExists($offset)) {
-            unset($this->array[$offset]);
-            $this->count--;
-        }
+        unset($this->array[$offset]);
+        $this->count = null;
     }
 
     // -------------------------------------------------------------------------
@@ -197,6 +193,10 @@ final class Dict implements AnyArray
      */
     public function count(): int
     {
+        if ($this->count === null) {
+            $this->count = count($this->array);
+        }
+
         return $this->count;
     }
 }
