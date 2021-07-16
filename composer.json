@@ -6,12 +6,13 @@
     "psr-4": {
       "Zheltikov\\Arrays\\": "src/"
     },
-	"files": [
-		"src/functions.php"
-	]
+    "files": [
+      "src/functions.php"
+    ]
   },
   "require": {
-    "php": "^7.3"
+    "php": "^7.4",
+    "ext-json": "*"
   },
   "require-dev": {
     "nazar-pc/phpt-tests-runner": "^1.4"
