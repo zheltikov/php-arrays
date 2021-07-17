@@ -23,4 +23,24 @@ interface AnyArray extends KeyedTraversable
      * @return array
      */
     public function toArray(): array;
+
+    /**
+     * Returns true if the current `AnyArray` contains the value.
+     * Strict equality is used.
+     *
+     * @param mixed $value
+     * @return bool
+     */
+    public function contains($value): bool;
+
+    /**
+     * Returns true if the current `AnyArray` contains the key.
+     *
+     * The given key must be a valid array key, either a `string` or an `int`.
+     * Otherwise, an `InvalidArgumentException` is thrown.
+     *
+     * @param string|int $key
+     * @return bool
+     */
+    public function containsKey($key): bool;
 }

@@ -54,13 +54,39 @@ final class Vec implements AnyArray
         return $this->array;
     }
 
+    /**
+     * @param mixed $value
+     * @return bool
+     */
+    public function contains($value): bool
+    {
+        foreach ($this as $v) {
+            if ($value === $v) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    /**
+     * @param int $key
+     * @return bool
+     */
+    public function containsKey($key): bool
+    {
+        return $this->offsetExists($key);
+    }
+
     // -------------------------------------------------------------------------
 
     /**
-     * Checks if a given offset exists in this `KeyedTraversable`.
-     *
      * The supplied offset must be an `int`. Otherwise, an
      * `InvalidArgumentException` is thrown.
+     *
+     * ---
+     *
+     * {@inheritDoc}
      *
      * @param int $offset
      * @return bool
@@ -77,12 +103,12 @@ final class Vec implements AnyArray
     }
 
     /**
-     * Returns the value at the supplied offset in this `KeyedTraversable`.
-     *
      * The supplied offset must be an `int`. Otherwise, an
      * `InvalidArgumentException` is thrown.
      *
-     * If there is no value at such offset, an `OutOfBoundsException` is thrown.
+     * ---
+     *
+     * {@inheritDoc}
      *
      * @param int $offset
      * @return mixed
@@ -103,13 +129,12 @@ final class Vec implements AnyArray
     }
 
     /**
-     * Sets a value to a specific offset in this `Vec`.
-     *
-     * If the supplied offset is `null`, the value is appended, using the next
-     * available integer key, instead of being stored in a key-value manner.
-     *
      * The supplied offset must be an `int`. Otherwise, an
      * `InvalidArgumentException` is thrown.
+     *
+     * ---
+     *
+     * {@inheritDoc}
      *
      * @param int|null $offset
      * @param mixed $value
@@ -136,12 +161,14 @@ final class Vec implements AnyArray
     }
 
     /**
-     * Deletes a value by its offset from this `Vec`.
-     *
      * The supplied offset must be an `int`. Otherwise, an
      * `InvalidArgumentException` is thrown.
      *
      * Note: vecs only support deleting their last element.
+     *
+     * ---
+     *
+     * {@inheritDoc}
      *
      * @param int $offset
      */

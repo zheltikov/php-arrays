@@ -54,6 +54,36 @@ final class Keyset implements AnyArray
         return $this->array;
     }
 
+    /**
+     * For Keysets, this method is interchangeable with `containsKey`.
+     *
+     * ---
+     *
+     * {@inheritDoc}
+     *
+     * @param mixed $value
+     * @return bool
+     */
+    public function contains($value): bool
+    {
+        return $this->containsKey($value);
+    }
+
+    /**
+     * For Keysets, this method is interchangeable with `contains`.
+     *
+     * ---
+     *
+     * {@inheritDoc}
+     *
+     * @param string|int $key
+     * @return bool
+     */
+    public function containsKey($key): bool
+    {
+        return $this->offsetExists($key);
+    }
+
     // -------------------------------------------------------------------------
 
     /**
@@ -96,8 +126,9 @@ final class Keyset implements AnyArray
      * If the supplied offset is `null`, an `InvalidOperationException` is
      * thrown, this is because keysets do not support appending values.
      *
-     * The supplied value must be a valid array key, either a `string` or an
-     * `int`. Otherwise, an `InvalidArgumentException` is thrown.
+     * ---
+     *
+     * {@inheritDoc}
      *
      * @param null $offset
      * @param string|int $value

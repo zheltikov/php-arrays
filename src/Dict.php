@@ -53,6 +53,30 @@ final class Dict implements AnyArray
         return $this->array;
     }
 
+    /**
+     * @param mixed $value
+     * @return bool
+     */
+    public function contains($value): bool
+    {
+        foreach ($this as $v) {
+            if ($value === $v) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    /**
+     * @param string|int $key
+     * @return bool
+     */
+    public function containsKey($key): bool
+    {
+        return $this->offsetExists($key);
+    }
+
     // -------------------------------------------------------------------------
 
     /**
