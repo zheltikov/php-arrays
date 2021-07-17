@@ -53,6 +53,113 @@ final class Dict implements AnyArray
         return $this->array;
     }
 
+    /**
+     * @param mixed $value
+     * @return bool
+     */
+    public function contains($value): bool
+    {
+        foreach ($this as $v) {
+            if ($value === $v) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    /**
+     * @param string|int $key
+     * @return bool
+     */
+    public function containsKey($key): bool
+    {
+        return $this->offsetExists($key);
+    }
+
+    /**
+     * Checks if two dicts have the same key/value pairs.
+     * Elements are checked using strict comparison.
+     *
+     * @param \Zheltikov\Arrays\Dict $a
+     * @param \Zheltikov\Arrays\Dict $b
+     * @return bool
+     */
+    public static function equal(self $a, self $b): bool
+    {
+        if ($a->count() !== $b->count()) {
+            return false;
+        }
+
+        foreach ($a as $key => $value) {
+            if (
+                !$b->containsKey($key)
+                || $b[$key] !== $value
+            ) {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+    /**
+     * Checks if two dicts have the same key/value pairs, and in the same order.
+     * Elements are strictly compared.
+     *
+     * @param \Zheltikov\Arrays\Dict $a
+     * @param \Zheltikov\Arrays\Dict $b
+     * @return bool
+     */
+    public static function match(self $a, self $b): bool
+    {
+        if ($a->count() !== $b->count()) {
+            return false;
+        }
+
+        $a->rewind();
+        $b->rewind();
+
+        while (true) {
+            if (!$a->valid() || !$b->valid()) {
+                break;
+            }
+
+            if (
+                $a->key() !== $b->key()
+                || $a->current() !== $b->current()
+            ) {
+                return false;
+            }
+
+            $a->next();
+            $b->next();
+        }
+
+        return true;
+    }
+
+    /**
+     * Combines several dicts into a new one.
+     * Last key/value combination wins.
+     *
+     * @param \Zheltikov\Arrays\Dict $first
+     * @param \Zheltikov\Arrays\Dict ...$rest
+     * @return static
+     */
+    public static function merge(self $first, self ...$rest): self
+    {
+        $result = self::create($first);
+
+        foreach ($rest as $dict) {
+            foreach ($dict as $key => $value) {
+                $result[$key] = $value;
+            }
+        }
+
+        return $result;
+    }
+
     // -------------------------------------------------------------------------
 
     /**

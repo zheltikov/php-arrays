@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9b8ed77790c877f82e51aebebf78aae1",
+    "content-hash": "93d2c891ec6c98af4d2924f4e88637f0",
     "packages": [
         {
             "name": "zheltikov/php-exceptions",

@@ -54,6 +54,111 @@ final class Keyset implements AnyArray
         return $this->array;
     }
 
+    /**
+     * For Keysets, this method is interchangeable with `containsKey`.
+     *
+     * ---
+     *
+     * {@inheritDoc}
+     *
+     * @param mixed $value
+     * @return bool
+     */
+    public function contains($value): bool
+    {
+        return $this->containsKey($value);
+    }
+
+    /**
+     * For Keysets, this method is interchangeable with `contains`.
+     *
+     * ---
+     *
+     * {@inheritDoc}
+     *
+     * @param string|int $key
+     * @return bool
+     */
+    public function containsKey($key): bool
+    {
+        return $this->offsetExists($key);
+    }
+
+    /**
+     * Checks if two keysets contain the same values.
+     *
+     * @param \Zheltikov\Arrays\Keyset $a
+     * @param \Zheltikov\Arrays\Keyset $b
+     * @return bool
+     */
+    public static function equal(self $a, self $b): bool
+    {
+        if ($a->count() !== $b->count()) {
+            return false;
+        }
+
+        foreach ($a as $value) {
+            if (!$b->contains($value)) {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+    /**
+     * Checks if two keysets contain the same values, and in the same order.
+     * Elements are strictly compared.
+     *
+     * @param \Zheltikov\Arrays\Keyset $a
+     * @param \Zheltikov\Arrays\Keyset $b
+     * @return bool
+     */
+    public static function match(self $a, self $b): bool
+    {
+        if ($a->count() !== $b->count()) {
+            return false;
+        }
+
+        $a->rewind();
+        $b->rewind();
+
+        while (true) {
+            if (!$a->valid() || !$b->valid()) {
+                break;
+            }
+
+            if ($a->current() !== $b->current()) {
+                return false;
+            }
+
+            $a->next();
+            $b->next();
+        }
+
+        return true;
+    }
+
+    /**
+     * Combines several keysets into a new one.
+     *
+     * @param \Zheltikov\Arrays\Keyset $first
+     * @param \Zheltikov\Arrays\Keyset ...$rest
+     * @return static
+     */
+    public static function union(self $first, self ...$rest): self
+    {
+        $result = self::create($first);
+
+        foreach ($rest as $keyset) {
+            foreach ($keyset as $value) {
+                $result[] = $value;
+            }
+        }
+
+        return $result;
+    }
+
     // -------------------------------------------------------------------------
 
     /**
@@ -96,8 +201,9 @@ final class Keyset implements AnyArray
      * If the supplied offset is `null`, an `InvalidOperationException` is
      * thrown, this is because keysets do not support appending values.
      *
-     * The supplied value must be a valid array key, either a `string` or an
-     * `int`. Otherwise, an `InvalidArgumentException` is thrown.
+     * ---
+     *
+     * {@inheritDoc}
      *
      * @param null $offset
      * @param string|int $value
