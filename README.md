@@ -32,7 +32,7 @@ There are also available some shorthand creator functions, which are wrappers ar
 - `keyset()`
 - `dict()`
 
-## Example
+## Examples!
 
 ```php
 <?php
@@ -65,13 +65,13 @@ $items->containsKey(2);    // true
 
 // Iterating
 foreach ($items as $item) {
-  echo $item;
+    echo $item;
 }
 
 // Iterating with the index
 foreach ($items as $index => $item) {
-  echo $index;    // e.g. 0
-  echo $item;     // e.g. 'a'
+    echo $index;    // e.g. 0
+    echo $item;     // e.g. 'a'
 }
 
 // Equality checks. Elements are recursively compared with ===
@@ -96,7 +96,41 @@ $items instanceof Vec;    // true
 
 /*********************************** Keyset ***********************************/
 
+// Creating a keyset
+$items = keyset(['a', 'b', 'c']);
 
+// Checking if a keyset contains a value
+$items->contains('a');    // true
+
+// Adding/removing items
+$items[] = 'd';        // keyset(['a', 'b', 'c', 'd'])
+$items[] = 'a';        // keyset(['a', 'b', 'c', 'd'])
+unset($items['b']);    // keyset(['a', 'c', 'd'])
+
+// Getting the length
+count($items);      // 3
+$items->count();    // 3
+
+// Iterating
+foreach ($items as $item) {
+    echo $item;
+}
+
+// Equality checks. `match` returns false if the order does not match.
+Keyset::equal(keyset([1]), keyset([1]));          // true
+Keyset::match(keyset([1, 2]), keyset([2, 1]));    // false
+Keyset::equal(keyset([1, 2]), keyset([2, 1]));    // true
+
+// Combining keysets
+Keyset::union(keyset([1, 2]), keyset([2, 3]));    // keyset([1, 2, 3])
+
+// Converting from an iterable
+keyset(vec([1, 2, 1]));                // keyset([1, 2])
+keyset([20, 21]);                      // keyset([20, 21])
+keyset(dict(['key1' => 'value1']));    // keyset(['value1'])
+
+// Type checks
+$items instanceof Keyset;    // true
 
 /************************************ Dict ************************************/
 

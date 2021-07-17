@@ -84,6 +84,81 @@ final class Keyset implements AnyArray
         return $this->offsetExists($key);
     }
 
+    /**
+     * Checks if two keysets contain the same values.
+     *
+     * @param \Zheltikov\Arrays\Keyset $a
+     * @param \Zheltikov\Arrays\Keyset $b
+     * @return bool
+     */
+    public static function equal(self $a, self $b): bool
+    {
+        if ($a->count() !== $b->count()) {
+            return false;
+        }
+
+        foreach ($a as $value) {
+            if (!$b->contains($value)) {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+    /**
+     * Checks if two keysets contain the same values, and in the same order.
+     * Elements are strictly compared.
+     *
+     * @param \Zheltikov\Arrays\Keyset $a
+     * @param \Zheltikov\Arrays\Keyset $b
+     * @return bool
+     */
+    public static function match(self $a, self $b): bool
+    {
+        if ($a->count() !== $b->count()) {
+            return false;
+        }
+
+        $a->rewind();
+        $b->rewind();
+
+        while (true) {
+            if (!$a->valid() || !$b->valid()) {
+                break;
+            }
+
+            if ($a->current() !== $b->current()) {
+                return false;
+            }
+
+            $a->next();
+            $b->next();
+        }
+
+        return true;
+    }
+
+    /**
+     * Combines several keysets into a new one.
+     *
+     * @param \Zheltikov\Arrays\Keyset $first
+     * @param \Zheltikov\Arrays\Keyset ...$rest
+     * @return static
+     */
+    public static function union(self $first, self ...$rest): self
+    {
+        $result = self::create($first);
+
+        foreach ($rest as $vec) {
+            foreach ($vec as $value) {
+                $result[] = $value;
+            }
+        }
+
+        return $result;
+    }
+
     // -------------------------------------------------------------------------
 
     /**
