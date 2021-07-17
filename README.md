@@ -157,7 +157,7 @@ count($items);      // 2
 $items->count();    // 2
 
 // Checking if a dict contains a key or value
-$items->contains_key('a');    // true
+$items->containsKey('a');    // true
 $items->contains(3);          // true
 
 // Iterating values
@@ -172,7 +172,7 @@ foreach ($items as $key => $value) {
 }
 
 // Equality checks. `match` returns false if the order does not match.
-Dict::equ(dict(), dict());                                          // true
+Dict::equal(dict(), dict());                                        // true
 Dict::match(dict([0 => 10, 1 => 11]), dict([1 => 11, 0 => 10]));    // false
 Dict::equal(dict([0 => 10, 1 => 11]), dict([1 => 11, 0 => 10]));    // true
 

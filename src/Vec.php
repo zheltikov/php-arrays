@@ -121,6 +121,23 @@ final class Vec implements AnyArray
         return $result;
     }
 
+    /**
+     * Creates a new Vec containing the keys of the input iterable.
+     *
+     * @param iterable $input
+     * @return static
+     */
+    public static function keys(iterable $input): self
+    {
+        $result = self::create();
+
+        foreach ($input as $key => $_) {
+            $result[] = $key;
+        }
+
+        return $result;
+    }
+
     // -------------------------------------------------------------------------
 
     /**

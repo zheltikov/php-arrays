@@ -150,8 +150,8 @@ final class Keyset implements AnyArray
     {
         $result = self::create($first);
 
-        foreach ($rest as $vec) {
-            foreach ($vec as $value) {
+        foreach ($rest as $keyset) {
+            foreach ($keyset as $value) {
                 $result[] = $value;
             }
         }
