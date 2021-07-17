@@ -12,8 +12,7 @@
   },
   "require": {
     "php": "^7.4",
-    "zheltikov/php-exceptions": "^1.0",
-    "zheltikov/php-invariant": "^1.2"
+    "zheltikov/php-exceptions": "^1.0"
   },
   "require-dev": {
     "nazar-pc/phpt-tests-runner": "^1.4"
