@@ -42,6 +42,8 @@ require_once(__DIR__ . '/../vendor/autoload.php');
 use Zheltikov\Arrays\{Vec, Keyset, Dict};
 use function Zheltikov\Arrays\{vec, keyset, dict};
 
+/************************************* Vec ************************************/
+
 // Creating a vec
 $items = vec(['a', 'b', 'c']);
 
@@ -91,5 +93,11 @@ vec(dict(['key1' => 'value1']));    // vec(['value1'])
 
 // Type checks
 $items instanceof Vec;    // true
+
+/*********************************** Keyset ***********************************/
+
+
+
+/************************************ Dict ************************************/
 
 ```

@@ -78,6 +78,49 @@ final class Vec implements AnyArray
         return $this->offsetExists($key);
     }
 
+    /**
+     * Checks if two vecs are equal.
+     * Elements are strictly compared.
+     *
+     * @param \Zheltikov\Arrays\Vec $a
+     * @param \Zheltikov\Arrays\Vec $b
+     * @return bool
+     */
+    public static function equal(self $a, self $b): bool
+    {
+        if ($a->count() !== $b->count()) {
+            return false;
+        }
+
+        foreach ($a as $key => $value) {
+            if ($value !== $b[$key]) {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+    /**
+     * Combines several vecs into a new one.
+     *
+     * @param \Zheltikov\Arrays\Vec $first
+     * @param \Zheltikov\Arrays\Vec ...$rest
+     * @return static
+     */
+    public static function concat(self $first, self ...$rest): self
+    {
+        $result = self::create($first);
+
+        foreach ($rest as $vec) {
+            foreach ($vec as $value) {
+                $result[] = $value;
+            }
+        }
+
+        return $result;
+    }
+
     // -------------------------------------------------------------------------
 
     /**
