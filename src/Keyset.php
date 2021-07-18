@@ -192,7 +192,7 @@ final class Keyset implements AnyArray
             return $this->array[$offset];
         }
 
-        throw new OutOfBoundsException('Out of bounds keyset access: invalid index ' . var_export($offset));
+        throw new OutOfBoundsException('Out of bounds keyset access: invalid index ' . var_export($offset, true));
     }
 
     /**
@@ -248,7 +248,7 @@ final class Keyset implements AnyArray
     {
         if (!$this->valid()) {
             throw new OutOfBoundsException(
-                'Out of bounds keyset access: invalid index ' . var_export($this->current_key)
+                'Out of bounds keyset access: invalid index ' . var_export($this->current_key, true)
             );
         }
 
