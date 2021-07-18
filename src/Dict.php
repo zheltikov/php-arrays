@@ -193,7 +193,7 @@ final class Dict implements AnyArray
             return $this->array[$offset];
         }
 
-        throw new OutOfBoundsException('Out of bounds dict access: invalid index ' . var_export($offset));
+        throw new OutOfBoundsException('Out of bounds dict access: invalid index ' . var_export($offset, true));
     }
 
     /**
@@ -242,7 +242,7 @@ final class Dict implements AnyArray
     {
         if (!$this->valid()) {
             throw new OutOfBoundsException(
-                'Out of bounds dict access: invalid index ' . var_export($this->current_key)
+                'Out of bounds dict access: invalid index ' . var_export($this->current_key, true)
             );
         }
 

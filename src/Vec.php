@@ -185,7 +185,7 @@ final class Vec implements AnyArray
             return $this->array[$offset];
         }
 
-        throw new OutOfBoundsException('Out of bounds vec access: invalid index ' . var_export($offset));
+        throw new OutOfBoundsException('Out of bounds vec access: invalid index ' . var_export($offset, true));
     }
 
     /**
@@ -214,7 +214,7 @@ final class Vec implements AnyArray
         }
 
         if (!array_key_exists($offset, $this->array)) {
-            throw new OutOfBoundsException('Out of bounds vec access: invalid index ' . var_export($offset));
+            throw new OutOfBoundsException('Out of bounds vec access: invalid index ' . var_export($offset, true));
         }
 
         $this->array[$offset] = $value;
@@ -268,7 +268,7 @@ final class Vec implements AnyArray
     {
         if (!$this->valid()) {
             throw new OutOfBoundsException(
-                'Out of bounds vec access: invalid index ' . var_export($this->current_key)
+                'Out of bounds vec access: invalid index ' . var_export($this->current_key, true)
             );
         }
 
