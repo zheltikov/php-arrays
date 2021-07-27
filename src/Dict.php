@@ -6,29 +6,37 @@ use InvalidArgumentException;
 use OutOfBoundsException;
 
 /**
+ * An ordered key-value data structure. Keys must be `string`s or `int`s.
+ *
  * Class Dict
  * @package Zheltikov\Arrays
  */
 final class Dict implements AnyArray
 {
     /**
+     * The internal array that is used to store the data.
+     *
      * @var array
      */
     private array $array = [];
 
     /**
+     * The current key of the iterator.
+     *
      * @var string|int|null
      */
     private $current_key = null;
 
     /**
+     * The number of elements in this dict.
+     *
      * @var int|null
      */
     private ?int $count = null;
 
     /**
      * Dict constructor.
-     * @param iterable|array $input
+     * @param iterable|array $input The initial data.
      */
     private function __construct(iterable $input = [])
     {
@@ -38,7 +46,7 @@ final class Dict implements AnyArray
     }
 
     /**
-     * @return static
+     * @return static A new instance.
      */
     public static function create(iterable $input = []): self
     {
@@ -46,7 +54,7 @@ final class Dict implements AnyArray
     }
 
     /**
-     * @return array
+     * @return array A plain PHP array with the same values as this container.
      */
     public function toArray(): array
     {
@@ -54,8 +62,8 @@ final class Dict implements AnyArray
     }
 
     /**
-     * @param mixed $value
-     * @return bool
+     * @param mixed $value The value to search.
+     * @return bool The search result, `true` if the value was found.
      */
     public function contains($value): bool
     {
@@ -69,8 +77,8 @@ final class Dict implements AnyArray
     }
 
     /**
-     * @param string|int $key
-     * @return bool
+     * @param string|int $key The key to search.
+     * @return bool The search result, `true` if the key was found.
      */
     public function containsKey($key): bool
     {
@@ -81,9 +89,9 @@ final class Dict implements AnyArray
      * Checks if two dicts have the same key/value pairs.
      * Elements are checked using strict comparison.
      *
-     * @param \Zheltikov\Arrays\Dict $a
-     * @param \Zheltikov\Arrays\Dict $b
-     * @return bool
+     * @param \Zheltikov\Arrays\Dict $a The first dict.
+     * @param \Zheltikov\Arrays\Dict $b The second dict.
+     * @return bool The comparison result, `true` if both dicts are equal.
      */
     public static function equal(self $a, self $b): bool
     {
@@ -107,9 +115,9 @@ final class Dict implements AnyArray
      * Checks if two dicts have the same key/value pairs, and in the same order.
      * Elements are strictly compared.
      *
-     * @param \Zheltikov\Arrays\Dict $a
-     * @param \Zheltikov\Arrays\Dict $b
-     * @return bool
+     * @param \Zheltikov\Arrays\Dict $a The first dict.
+     * @param \Zheltikov\Arrays\Dict $b The second dict.
+     * @return bool The comparison result, `true` if both dicts are identical.
      */
     public static function match(self $a, self $b): bool
     {
@@ -143,9 +151,9 @@ final class Dict implements AnyArray
      * Combines several dicts into a new one.
      * Last key/value combination wins.
      *
-     * @param \Zheltikov\Arrays\Dict $first
-     * @param \Zheltikov\Arrays\Dict ...$rest
-     * @return static
+     * @param \Zheltikov\Arrays\Dict $first The first dict.
+     * @param \Zheltikov\Arrays\Dict ...$rest The other dicts.
+     * @return static A new combined dict.
      */
     public static function merge(self $first, self ...$rest): self
     {
@@ -163,8 +171,8 @@ final class Dict implements AnyArray
     // -------------------------------------------------------------------------
 
     /**
-     * @param string|int $offset
-     * @return bool
+     * @param string|int $offset The key to check.
+     * @return bool The check result, `true` if the key exists.
      */
     public function offsetExists($offset): bool
     {
@@ -178,8 +186,8 @@ final class Dict implements AnyArray
     }
 
     /**
-     * @param string|int $offset
-     * @return mixed
+     * @param string|int $offset The key to query.
+     * @return mixed The value at the specified key.
      */
     public function offsetGet($offset)
     {
@@ -197,8 +205,8 @@ final class Dict implements AnyArray
     }
 
     /**
-     * @param string|int|null $offset
-     * @param mixed $value
+     * @param string|int|null $offset The key at which to set the value.
+     * @param mixed $value The value to set.
      */
     public function offsetSet($offset, $value): void
     {
@@ -219,7 +227,7 @@ final class Dict implements AnyArray
     }
 
     /**
-     * @param string|int $offset
+     * @param string|int $offset The key to remove.
      */
     public function offsetUnset($offset): void
     {
@@ -236,7 +244,7 @@ final class Dict implements AnyArray
     // -------------------------------------------------------------------------
 
     /**
-     * @return mixed
+     * @return mixed The current value.
      */
     public function current()
     {
@@ -250,7 +258,7 @@ final class Dict implements AnyArray
     }
 
     /**
-     * @return string|int|null
+     * @return string|int|null The current key.
      */
     public function key()
     {
@@ -286,7 +294,7 @@ final class Dict implements AnyArray
     }
 
     /**
-     * @return bool
+     * @return bool The check result, `true` if the current key is valid.
      */
     public function valid(): bool
     {
@@ -296,7 +304,7 @@ final class Dict implements AnyArray
     // -------------------------------------------------------------------------
 
     /**
-     * @return int
+     * @return int The number of key-value pairs in this dict.
      */
     public function count(): int
     {
