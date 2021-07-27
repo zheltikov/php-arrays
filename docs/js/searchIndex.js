@@ -28,7 +28,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Zheltikov\\Arrays\\Dict",
             "name": "Dict",
-            "summary": "Class\u0020Dict",
+            "summary": "An\u0020ordered\u0020key\u002Dvalue\u0020data\u0020structure.\u0020Keys\u0020must\u0020be\u0020\u0060string\u0060s\u0020or\u0020\u0060int\u0060s.",
             "url": "classes/Zheltikov-Arrays-Dict.html"
         },                {
             "fqsen": "\\Zheltikov\\Arrays\\Dict\u003A\u003A__construct\u0028\u0029",
@@ -118,17 +118,17 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Zheltikov\\Arrays\\Dict\u003A\u003A\u0024count",
             "name": "count",
-            "summary": "",
+            "summary": "The\u0020number\u0020of\u0020elements\u0020in\u0020this\u0020dict.",
             "url": "classes/Zheltikov-Arrays-Dict.html#property_count"
         },                {
             "fqsen": "\\Zheltikov\\Arrays\\Dict\u003A\u003A\u0024array",
             "name": "array",
-            "summary": "",
+            "summary": "The\u0020internal\u0020array\u0020that\u0020is\u0020used\u0020to\u0020store\u0020the\u0020data.",
             "url": "classes/Zheltikov-Arrays-Dict.html#property_array"
         },                {
             "fqsen": "\\Zheltikov\\Arrays\\Dict\u003A\u003A\u0024current_key",
             "name": "current_key",
-            "summary": "",
+            "summary": "The\u0020current\u0020key\u0020of\u0020the\u0020iterator.",
             "url": "classes/Zheltikov-Arrays-Dict.html#property_current_key"
         },                {
             "fqsen": "\\Zheltikov\\Arrays\\dict\u0028\u0029",
