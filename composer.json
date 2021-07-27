@@ -25,6 +25,8 @@
   ],
   "license": "MIT",
   "scripts": {
-    "test": "phpt-tests-runner tests/"
+    "test": "phpt-tests-runner tests/",
+    "phpdoc": "phpdoc -d ./src -t ./docs --setting=graphs.enabled=true",
+    "phpdoc-clean": "rm -r ./.phpdoc ; rm -r ./docs ; mkdir ./docs"
   }
 }
