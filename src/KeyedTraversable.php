@@ -7,6 +7,20 @@ use Countable;
 use Iterator;
 
 /**
+ * Represents an object that can be iterated over using `foreach`, allowing a
+ * key.
+ *
+ * Additionally, represents an object that can be indexed using square-bracket
+ * syntax.
+ *
+ * Square bracket syntax is:
+ *
+ * ```php
+ * $keyed_traversable[$key]
+ * ```
+ *
+ * At this point, this includes objects with keys of type `int` and `string`.
+ *
  * Interface KeyedTraversable
  * @package Zheltikov\Arrays
  */
@@ -21,8 +35,8 @@ interface KeyedTraversable extends
      * The supplied offset must be a valid array key, either a `string` or an
      * `int`. Otherwise, an `InvalidArgumentException` is thrown.
      *
-     * @param string|int $offset
-     * @return bool
+     * @param string|int $offset The key to check.
+     * @return bool The check result, `true` if the key exists.
      */
     public function offsetExists($offset): bool;
 
@@ -34,8 +48,8 @@ interface KeyedTraversable extends
      *
      * If there is no value at such offset, an `OutOfBoundsException` is thrown.
      *
-     * @param string|int $offset
-     * @return mixed
+     * @param string|int $offset The key to get.
+     * @return mixed The value at the specified offset.
      */
     public function offsetGet($offset);
 
@@ -48,8 +62,8 @@ interface KeyedTraversable extends
      * The supplied offset must be a valid array key, either a `string` or an
      * `int`. Otherwise, an `InvalidArgumentException` is thrown.
      *
-     * @param string|int|null $offset
-     * @param mixed $value
+     * @param string|int|null $offset The offset at which to set the value.
+     * @param mixed $value The value to set.
      */
     public function offsetSet($offset, $value): void;
 
@@ -59,7 +73,7 @@ interface KeyedTraversable extends
      * The supplied offset must be a valid array key, either a `string` or an
      * `int`. Otherwise, an `InvalidArgumentException` is thrown.
      *
-     * @param string|int $offset
+     * @param string|int $offset The key to remove.
      */
     public function offsetUnset($offset): void;
 
@@ -71,7 +85,7 @@ interface KeyedTraversable extends
      * If there is no valid element, an `OutOfBoundsException` is thrown.
      * This may happen if there are no elements at all, for example.
      *
-     * @return mixed
+     * @return mixed The current value.
      */
     public function current();
 
@@ -80,7 +94,7 @@ interface KeyedTraversable extends
      *
      * It may return `null` if there is no valid offset currently.
      *
-     * @return string|int|null
+     * @return string|int|null The current key.
      */
     public function key();
 
@@ -90,23 +104,23 @@ interface KeyedTraversable extends
     public function next(): void;
 
     /**
-     * Resets the offset to the first element in this `AnyArray`.
+     * Resets the offset to the first element in this `KeyedTraversable`.
      */
     public function rewind(): void;
 
     /**
-     * Checks if the current offset is valid in this `AnyArray`.
+     * Checks if the current offset is valid in this `KeyedTraversable`.
      *
-     * @return bool
+     * @return bool The check result, `true` if the current key is valid.
      */
     public function valid(): bool;
 
     // -------------------------------------------------------------------------
 
     /**
-     * Returns the number of elements in this `AnyArray`.
+     * Returns the number of elements in this `KeyedTraversable`.
      *
-     * @return int
+     * @return int The length of this container.
      */
     public function count(): int;
 }
