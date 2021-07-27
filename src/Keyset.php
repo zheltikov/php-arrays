@@ -8,7 +8,7 @@ use Zheltikov\Exceptions\InvalidOperationException;
 
 /**
  * Class Keyset
- * @package Zheltikov\Collections
+ * @package Zheltikov\Arrays
  */
 final class Keyset implements AnyArray
 {

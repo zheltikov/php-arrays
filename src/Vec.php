@@ -8,7 +8,7 @@ use Zheltikov\Exceptions\InvalidOperationException;
 
 /**
  * Class Vec
- * @package Zheltikov\Collections
+ * @package Zheltikov\Arrays
  */
 final class Vec implements AnyArray
 {
