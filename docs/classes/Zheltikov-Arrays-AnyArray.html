@@ -104,12 +104,14 @@
         <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/AnyArray.php"><a href="files/src-anyarray.html"><abbr title="src/AnyArray.php">AnyArray.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">9</span>
+    <span class="phpdocumentor-element-found-in__line">12</span>
 </aside>
 
-            <p class="phpdocumentor-summary">Interface AnyArray</p>
+            <p class="phpdocumentor-summary">The common interface for all array types (container objects).</p>
 
-    <section class="phpdocumentor-description"></section>
+    <section class="phpdocumentor-description"><p>This currently includes <code class="prettyprint">vec</code>, <code class="prettyprint">dict</code> and <code class="prettyprint">keyset</code>.</p>
+<p>Interface AnyArray</p>
+</section>
 
 
 
@@ -143,7 +145,7 @@
     <span>
                         &nbsp;: int    </span>
 </dt>
-<dd>Returns the number of elements in this `AnyArray`.</dd>
+<dd>Returns the number of elements in this `KeyedTraversable`.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Zheltikov-Arrays-AnyArray.html#method_create">create()</a>
@@ -207,7 +209,7 @@ iterable object, empty by default.</dd>
     <span>
                         &nbsp;: void    </span>
 </dt>
-<dd>Resets the offset to the first element in this `AnyArray`.</dd>
+<dd>Resets the offset to the first element in this `KeyedTraversable`.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Zheltikov-Arrays-AnyArray.html#method_toArray">toArray()</a>
@@ -221,7 +223,7 @@ iterable object, empty by default.</dd>
     <span>
                         &nbsp;: bool    </span>
 </dt>
-<dd>Checks if the current offset is valid in this `AnyArray`.</dd>
+<dd>Checks if the current offset is valid in this `KeyedTraversable`.</dd>
 
         </dl>
 
@@ -247,7 +249,7 @@ iterable object, empty by default.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/AnyArray.php"><a href="files/src-anyarray.html"><abbr title="src/AnyArray.php">AnyArray.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">34</span>
+    <span class="phpdocumentor-element-found-in__line">38</span>
 </aside>
 
         <p class="phpdocumentor-summary">Returns true if the current `AnyArray` contains the value.</p>
@@ -266,7 +268,8 @@ iterable object, empty by default.</dd>
                 : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"></section>
+                    <section class="phpdocumentor-description"><p>The value to search.</p>
+</section>
 
             </dd>
             </dl>
@@ -276,7 +279,8 @@ iterable object, empty by default.</dd>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
     <span class="phpdocumentor-signature__response_type">bool</span>
             &mdash;
-            <section class="phpdocumentor-description"></section>
+            <section class="phpdocumentor-description"><p>The search result, <code class="prettyprint">true</code> if the value was found.</p>
+</section>
 
     
 </article>
@@ -293,7 +297,7 @@ iterable object, empty by default.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/AnyArray.php"><a href="files/src-anyarray.html"><abbr title="src/AnyArray.php">AnyArray.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">45</span>
+    <span class="phpdocumentor-element-found-in__line">49</span>
 </aside>
 
         <p class="phpdocumentor-summary">Returns true if the current `AnyArray` contains the key.</p>
@@ -313,7 +317,8 @@ Otherwise, an <code class="prettyprint">InvalidArgumentException</code> is throw
                 : <span class="phpdocumentor-signature__argument__return-type">string|int</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"></section>
+                    <section class="phpdocumentor-description"><p>The key to search.</p>
+</section>
 
             </dd>
             </dl>
@@ -323,7 +328,8 @@ Otherwise, an <code class="prettyprint">InvalidArgumentException</code> is throw
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
     <span class="phpdocumentor-signature__response_type">bool</span>
             &mdash;
-            <section class="phpdocumentor-description"></section>
+            <section class="phpdocumentor-description"><p>The search result, <code class="prettyprint">true</code> if the key was found.</p>
+</section>
 
     
 </article>
@@ -340,10 +346,10 @@ Otherwise, an <code class="prettyprint">InvalidArgumentException</code> is throw
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/KeyedTraversable.php"><a href="files/src-keyedtraversable.html"><abbr title="src/KeyedTraversable.php">KeyedTraversable.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">111</span>
+    <span class="phpdocumentor-element-found-in__line">125</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Returns the number of elements in this `AnyArray`.</p>
+        <p class="phpdocumentor-summary">Returns the number of elements in this `KeyedTraversable`.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -357,7 +363,8 @@ Otherwise, an <code class="prettyprint">InvalidArgumentException</code> is throw
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
     <span class="phpdocumentor-signature__response_type">int</span>
             &mdash;
-            <section class="phpdocumentor-description"></section>
+            <section class="phpdocumentor-description"><p>The length of this container.</p>
+</section>
 
     
 </article>
@@ -374,7 +381,7 @@ Otherwise, an <code class="prettyprint">InvalidArgumentException</code> is throw
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/AnyArray.php"><a href="files/src-anyarray.html"><abbr title="src/AnyArray.php">AnyArray.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">18</span>
+    <span class="phpdocumentor-element-found-in__line">22</span>
 </aside>
 
         <p class="phpdocumentor-summary">Creates a new instance of the current `AnyArray` type from the supplied
@@ -393,7 +400,9 @@ iterable object, empty by default.</p>
                 : <span class="phpdocumentor-signature__argument__return-type">iteratable&lt;string|int, mixed&gt;|array&lt;string|int, mixed&gt;</span>
                  = <span class="phpdocumentor-signature__argument__default-value">[]</span>            </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"></section>
+                    <section class="phpdocumentor-description"><p>An iterable to use when initializing the
+current <code class="prettyprint">AnyArray</code>.</p>
+</section>
 
             </dd>
             </dl>
@@ -403,7 +412,8 @@ iterable object, empty by default.</p>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
     <span class="phpdocumentor-signature__response_type">static</span>
             &mdash;
-            <section class="phpdocumentor-description"></section>
+            <section class="phpdocumentor-description"><p>A new <code class="prettyprint">AnyArray</code> instance.</p>
+</section>
 
     
 </article>
@@ -420,7 +430,7 @@ iterable object, empty by default.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/KeyedTraversable.php"><a href="files/src-keyedtraversable.html"><abbr title="src/KeyedTraversable.php">KeyedTraversable.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">76</span>
+    <span class="phpdocumentor-element-found-in__line">90</span>
 </aside>
 
         <p class="phpdocumentor-summary">Returns the element at the current position of this `KeyedTraversable`.</p>
@@ -439,7 +449,8 @@ This may happen if there are no elements at all, for example.</p>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
     <span class="phpdocumentor-signature__response_type">mixed</span>
             &mdash;
-            <section class="phpdocumentor-description"></section>
+            <section class="phpdocumentor-description"><p>The current value.</p>
+</section>
 
     
 </article>
@@ -456,7 +467,7 @@ This may happen if there are no elements at all, for example.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/KeyedTraversable.php"><a href="files/src-keyedtraversable.html"><abbr title="src/KeyedTraversable.php">KeyedTraversable.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">85</span>
+    <span class="phpdocumentor-element-found-in__line">99</span>
 </aside>
 
         <p class="phpdocumentor-summary">Returns the current internal offset of this `KeyedTraversable`.</p>
@@ -474,7 +485,8 @@ This may happen if there are no elements at all, for example.</p>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
     <span class="phpdocumentor-signature__response_type">string|int|null</span>
             &mdash;
-            <section class="phpdocumentor-description"></section>
+            <section class="phpdocumentor-description"><p>The current key.</p>
+</section>
 
     
 </article>
@@ -491,7 +503,7 @@ This may happen if there are no elements at all, for example.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/KeyedTraversable.php"><a href="files/src-keyedtraversable.html"><abbr title="src/KeyedTraversable.php">KeyedTraversable.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">90</span>
+    <span class="phpdocumentor-element-found-in__line">104</span>
 </aside>
 
         <p class="phpdocumentor-summary">Advances the offset to the next element in this `KeyedTraversable`.</p>
@@ -525,7 +537,7 @@ This may happen if there are no elements at all, for example.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/KeyedTraversable.php"><a href="files/src-keyedtraversable.html"><abbr title="src/KeyedTraversable.php">KeyedTraversable.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">27</span>
+    <span class="phpdocumentor-element-found-in__line">41</span>
 </aside>
 
         <p class="phpdocumentor-summary">Checks if a given offset exists in this `KeyedTraversable`.</p>
@@ -545,7 +557,8 @@ This may happen if there are no elements at all, for example.</p>
                 : <span class="phpdocumentor-signature__argument__return-type">string|int</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"></section>
+                    <section class="phpdocumentor-description"><p>The key to check.</p>
+</section>
 
             </dd>
             </dl>
@@ -555,7 +568,8 @@ This may happen if there are no elements at all, for example.</p>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
     <span class="phpdocumentor-signature__response_type">bool</span>
             &mdash;
-            <section class="phpdocumentor-description"></section>
+            <section class="phpdocumentor-description"><p>The check result, <code class="prettyprint">true</code> if the key exists.</p>
+</section>
 
     
 </article>
@@ -572,7 +586,7 @@ This may happen if there are no elements at all, for example.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/KeyedTraversable.php"><a href="files/src-keyedtraversable.html"><abbr title="src/KeyedTraversable.php">KeyedTraversable.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">40</span>
+    <span class="phpdocumentor-element-found-in__line">54</span>
 </aside>
 
         <p class="phpdocumentor-summary">Returns the value at the supplied offset in this `KeyedTraversable`.</p>
@@ -593,7 +607,8 @@ This may happen if there are no elements at all, for example.</p>
                 : <span class="phpdocumentor-signature__argument__return-type">string|int</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"></section>
+                    <section class="phpdocumentor-description"><p>The key to get.</p>
+</section>
 
             </dd>
             </dl>
@@ -603,7 +618,8 @@ This may happen if there are no elements at all, for example.</p>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
     <span class="phpdocumentor-signature__response_type">mixed</span>
             &mdash;
-            <section class="phpdocumentor-description"></section>
+            <section class="phpdocumentor-description"><p>The value at the specified offset.</p>
+</section>
 
     
 </article>
@@ -620,7 +636,7 @@ This may happen if there are no elements at all, for example.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/KeyedTraversable.php"><a href="files/src-keyedtraversable.html"><abbr title="src/KeyedTraversable.php">KeyedTraversable.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">54</span>
+    <span class="phpdocumentor-element-found-in__line">68</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets a value to a specific offset in this `KeyedTraversable`.</p>
@@ -642,7 +658,8 @@ available integer key, instead of being stored in a key-value manner.</p>
                 : <span class="phpdocumentor-signature__argument__return-type">string|int|null</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"></section>
+                    <section class="phpdocumentor-description"><p>The offset at which to set the value.</p>
+</section>
 
             </dd>
                     <dt class="phpdocumentor-argument-list__entry">
@@ -650,7 +667,8 @@ available integer key, instead of being stored in a key-value manner.</p>
                 : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"></section>
+                    <section class="phpdocumentor-description"><p>The value to set.</p>
+</section>
 
             </dd>
             </dl>
@@ -677,7 +695,7 @@ available integer key, instead of being stored in a key-value manner.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/KeyedTraversable.php"><a href="files/src-keyedtraversable.html"><abbr title="src/KeyedTraversable.php">KeyedTraversable.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">64</span>
+    <span class="phpdocumentor-element-found-in__line">78</span>
 </aside>
 
         <p class="phpdocumentor-summary">Deletes a value by its offset from this `KeyedTraversable`.</p>
@@ -697,7 +715,8 @@ available integer key, instead of being stored in a key-value manner.</p>
                 : <span class="phpdocumentor-signature__argument__return-type">string|int</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"></section>
+                    <section class="phpdocumentor-description"><p>The key to remove.</p>
+</section>
 
             </dd>
             </dl>
@@ -724,10 +743,10 @@ available integer key, instead of being stored in a key-value manner.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/KeyedTraversable.php"><a href="files/src-keyedtraversable.html"><abbr title="src/KeyedTraversable.php">KeyedTraversable.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">95</span>
+    <span class="phpdocumentor-element-found-in__line">109</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Resets the offset to the first element in this `AnyArray`.</p>
+        <p class="phpdocumentor-summary">Resets the offset to the first element in this `KeyedTraversable`.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -758,7 +777,7 @@ available integer key, instead of being stored in a key-value manner.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/AnyArray.php"><a href="files/src-anyarray.html"><abbr title="src/AnyArray.php">AnyArray.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">25</span>
+    <span class="phpdocumentor-element-found-in__line">29</span>
 </aside>
 
         <p class="phpdocumentor-summary">Converts the current `AnyArray` to a plain PHP array.</p>
@@ -775,7 +794,8 @@ available integer key, instead of being stored in a key-value manner.</p>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
     <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span>
             &mdash;
-            <section class="phpdocumentor-description"></section>
+            <section class="phpdocumentor-description"><p>A plain PHP array with the same values as this <code class="prettyprint">AnyArray</code>.</p>
+</section>
 
     
 </article>
@@ -792,10 +812,10 @@ available integer key, instead of being stored in a key-value manner.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/KeyedTraversable.php"><a href="files/src-keyedtraversable.html"><abbr title="src/KeyedTraversable.php">KeyedTraversable.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">102</span>
+    <span class="phpdocumentor-element-found-in__line">116</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Checks if the current offset is valid in this `AnyArray`.</p>
+        <p class="phpdocumentor-summary">Checks if the current offset is valid in this `KeyedTraversable`.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -809,7 +829,8 @@ available integer key, instead of being stored in a key-value manner.</p>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
     <span class="phpdocumentor-signature__response_type">bool</span>
             &mdash;
-            <section class="phpdocumentor-description"></section>
+            <section class="phpdocumentor-description"><p>The check result, <code class="prettyprint">true</code> if the current key is valid.</p>
+</section>
 
     
 </article>

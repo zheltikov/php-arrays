@@ -3,7 +3,7 @@ Search.appendIndex(
                 {
             "fqsen": "\\Zheltikov\\Arrays\\AnyArray",
             "name": "AnyArray",
-            "summary": "Interface\u0020AnyArray",
+            "summary": "The\u0020common\u0020interface\u0020for\u0020all\u0020array\u0020types\u0020\u0028container\u0020objects\u0029.",
             "url": "classes/Zheltikov-Arrays-AnyArray.html"
         },                {
             "fqsen": "\\Zheltikov\\Arrays\\AnyArray\u003A\u003Acreate\u0028\u0029",
@@ -148,7 +148,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Zheltikov\\Arrays\\KeyedTraversable",
             "name": "KeyedTraversable",
-            "summary": "Interface\u0020KeyedTraversable",
+            "summary": "Represents\u0020an\u0020object\u0020that\u0020can\u0020be\u0020iterated\u0020over\u0020using\u0020\u0060foreach\u0060,\u0020allowing\u0020a\nkey.",
             "url": "classes/Zheltikov-Arrays-KeyedTraversable.html"
         },                {
             "fqsen": "\\Zheltikov\\Arrays\\KeyedTraversable\u003A\u003AoffsetExists\u0028\u0029",
@@ -188,17 +188,17 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Zheltikov\\Arrays\\KeyedTraversable\u003A\u003Arewind\u0028\u0029",
             "name": "rewind",
-            "summary": "Resets\u0020the\u0020offset\u0020to\u0020the\u0020first\u0020element\u0020in\u0020this\u0020\u0060AnyArray\u0060.",
+            "summary": "Resets\u0020the\u0020offset\u0020to\u0020the\u0020first\u0020element\u0020in\u0020this\u0020\u0060KeyedTraversable\u0060.",
             "url": "classes/Zheltikov-Arrays-KeyedTraversable.html#method_rewind"
         },                {
             "fqsen": "\\Zheltikov\\Arrays\\KeyedTraversable\u003A\u003Avalid\u0028\u0029",
             "name": "valid",
-            "summary": "Checks\u0020if\u0020the\u0020current\u0020offset\u0020is\u0020valid\u0020in\u0020this\u0020\u0060AnyArray\u0060.",
+            "summary": "Checks\u0020if\u0020the\u0020current\u0020offset\u0020is\u0020valid\u0020in\u0020this\u0020\u0060KeyedTraversable\u0060.",
             "url": "classes/Zheltikov-Arrays-KeyedTraversable.html#method_valid"
         },                {
             "fqsen": "\\Zheltikov\\Arrays\\KeyedTraversable\u003A\u003Acount\u0028\u0029",
             "name": "count",
-            "summary": "Returns\u0020the\u0020number\u0020of\u0020elements\u0020in\u0020this\u0020\u0060AnyArray\u0060.",
+            "summary": "Returns\u0020the\u0020number\u0020of\u0020elements\u0020in\u0020this\u0020\u0060KeyedTraversable\u0060.",
             "url": "classes/Zheltikov-Arrays-KeyedTraversable.html#method_count"
         },                {
             "fqsen": "\\Zheltikov\\Arrays\\Keyset",
