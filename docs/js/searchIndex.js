@@ -203,7 +203,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Zheltikov\\Arrays\\Keyset",
             "name": "Keyset",
-            "summary": "Class\u0020Keyset",
+            "summary": "An\u0020ordered\u0020data\u0020structure\u0020without\u0020duplicates.\u0020It\u0020can\u0020only\u0020contain\u0020\u0060string\u0060\u0020or\n\u0060int\u0060\u0020values.",
             "url": "classes/Zheltikov-Arrays-Keyset.html"
         },                {
             "fqsen": "\\Zheltikov\\Arrays\\Keyset\u003A\u003A__construct\u0028\u0029",
@@ -293,22 +293,22 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Zheltikov\\Arrays\\Keyset\u003A\u003A\u0024count",
             "name": "count",
-            "summary": "",
+            "summary": "The\u0020number\u0020of\u0020elements\u0020in\u0020this\u0020keyset.",
             "url": "classes/Zheltikov-Arrays-Keyset.html#property_count"
         },                {
             "fqsen": "\\Zheltikov\\Arrays\\Keyset\u003A\u003A\u0024array",
             "name": "array",
-            "summary": "",
+            "summary": "The\u0020internal\u0020array\u0020that\u0020is\u0020used\u0020to\u0020store\u0020the\u0020data.",
             "url": "classes/Zheltikov-Arrays-Keyset.html#property_array"
         },                {
             "fqsen": "\\Zheltikov\\Arrays\\Keyset\u003A\u003A\u0024current_key",
             "name": "current_key",
-            "summary": "",
+            "summary": "The\u0020current\u0020key\u0020of\u0020the\u0020iterator.",
             "url": "classes/Zheltikov-Arrays-Keyset.html#property_current_key"
         },                {
             "fqsen": "\\Zheltikov\\Arrays\\Vec",
             "name": "Vec",
-            "summary": "Class\u0020Vec",
+            "summary": "An\u0020ordered,\u0020iterable\u0020data\u0020structure.",
             "url": "classes/Zheltikov-Arrays-Vec.html"
         },                {
             "fqsen": "\\Zheltikov\\Arrays\\Vec\u003A\u003A__construct\u0028\u0029",
@@ -398,17 +398,17 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Zheltikov\\Arrays\\Vec\u003A\u003A\u0024count",
             "name": "count",
-            "summary": "",
+            "summary": "The\u0020length\u0020of\u0020this\u0020vec.",
             "url": "classes/Zheltikov-Arrays-Vec.html#property_count"
         },                {
             "fqsen": "\\Zheltikov\\Arrays\\Vec\u003A\u003A\u0024array",
             "name": "array",
-            "summary": "",
+            "summary": "The\u0020internal\u0020array\u0020that\u0020is\u0020used\u0020to\u0020store\u0020the\u0020data.",
             "url": "classes/Zheltikov-Arrays-Vec.html#property_array"
         },                {
             "fqsen": "\\Zheltikov\\Arrays\\Vec\u003A\u003A\u0024current_key",
             "name": "current_key",
-            "summary": "",
+            "summary": "The\u0020current\u0020key\u0020of\u0020the\u0020iterator.",
             "url": "classes/Zheltikov-Arrays-Vec.html#property_current_key"
         },                {
             "fqsen": "\\",

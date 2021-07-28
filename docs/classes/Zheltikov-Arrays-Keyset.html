@@ -108,12 +108,14 @@
         <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Keyset.php"><a href="files/src-keyset.html"><abbr title="src/Keyset.php">Keyset.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">13</span>
+    <span class="phpdocumentor-element-found-in__line">16</span>
 </aside>
 
-            <p class="phpdocumentor-summary">Class Keyset</p>
+            <p class="phpdocumentor-summary">An ordered data structure without duplicates. It can only contain `string` or
+`int` values.</p>
 
-    <section class="phpdocumentor-description"></section>
+    <section class="phpdocumentor-description"><p>Class Keyset</p>
+</section>
 
 
 
@@ -144,21 +146,21 @@
     <span>
                 &nbsp;: array&lt;string|int, mixed&gt;            </span>
 </dt>
-<dd></dd>
+<dd>The internal array that is used to store the data.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -private">
     <a href="classes/Zheltikov-Arrays-Keyset.html#property_count">$count</a>
     <span>
                 &nbsp;: int|null            </span>
 </dt>
-<dd></dd>
+<dd>The number of elements in this keyset.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -private">
     <a href="classes/Zheltikov-Arrays-Keyset.html#property_current_key">$current_key</a>
     <span>
                 &nbsp;: string|int|null            </span>
 </dt>
-<dd></dd>
+<dd>The current key of the iterator.</dd>
 
                 <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Zheltikov-Arrays-Keyset.html#method_contains">contains()</a>
@@ -192,7 +194,7 @@ iterable object, empty by default.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Zheltikov-Arrays-Keyset.html#method_current">current()</a>
     <span>
-                        &nbsp;: string|int    </span>
+                        &nbsp;: mixed    </span>
 </dt>
 <dd></dd>
 
@@ -315,10 +317,11 @@ iterable object, empty by default.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Keyset.php"><a href="files/src-keyset.html"><abbr title="src/Keyset.php">Keyset.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">18</span>
+    <span class="phpdocumentor-element-found-in__line">23</span>
 </aside>
 
-    
+        <p class="phpdocumentor-summary">The internal array that is used to store the data.</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">private</span>
         <span class="phpdocumentor-signature__type">array&lt;string|int, mixed&gt;</span>
@@ -346,10 +349,11 @@ iterable object, empty by default.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Keyset.php"><a href="files/src-keyset.html"><abbr title="src/Keyset.php">Keyset.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">28</span>
+    <span class="phpdocumentor-element-found-in__line">37</span>
 </aside>
 
-    
+        <p class="phpdocumentor-summary">The number of elements in this keyset.</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">private</span>
         <span class="phpdocumentor-signature__type">int|null</span>
@@ -377,10 +381,11 @@ iterable object, empty by default.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Keyset.php"><a href="files/src-keyset.html"><abbr title="src/Keyset.php">Keyset.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">23</span>
+    <span class="phpdocumentor-element-found-in__line">30</span>
 </aside>
 
-    
+        <p class="phpdocumentor-summary">The current key of the iterator.</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">private</span>
         <span class="phpdocumentor-signature__type">string|int|null</span>
@@ -412,7 +417,7 @@ iterable object, empty by default.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Keyset.php"><a href="files/src-keyset.html"><abbr title="src/Keyset.php">Keyset.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">67</span>
+    <span class="phpdocumentor-element-found-in__line">76</span>
 </aside>
 
         <p class="phpdocumentor-summary">For Keysets, this method is interchangeable with `containsKey`.</p>
@@ -431,7 +436,8 @@ iterable object, empty by default.</dd>
                 : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"></section>
+                    <section class="phpdocumentor-description"><p>The value to search.</p>
+</section>
 
             </dd>
             </dl>
@@ -441,7 +447,8 @@ iterable object, empty by default.</dd>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
     <span class="phpdocumentor-signature__response_type">bool</span>
             &mdash;
-            <section class="phpdocumentor-description"></section>
+            <section class="phpdocumentor-description"><p>The search result, <code class="prettyprint">true</code> if the value was found.</p>
+</section>
 
     
 </article>
@@ -458,7 +465,7 @@ iterable object, empty by default.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Keyset.php"><a href="files/src-keyset.html"><abbr title="src/Keyset.php">Keyset.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">82</span>
+    <span class="phpdocumentor-element-found-in__line">91</span>
 </aside>
 
         <p class="phpdocumentor-summary">For Keysets, this method is interchangeable with `contains`.</p>
@@ -477,7 +484,8 @@ iterable object, empty by default.</dd>
                 : <span class="phpdocumentor-signature__argument__return-type">string|int</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"></section>
+                    <section class="phpdocumentor-description"><p>The key to search.</p>
+</section>
 
             </dd>
             </dl>
@@ -487,7 +495,8 @@ iterable object, empty by default.</dd>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
     <span class="phpdocumentor-signature__response_type">bool</span>
             &mdash;
-            <section class="phpdocumentor-description"></section>
+            <section class="phpdocumentor-description"><p>The search result, <code class="prettyprint">true</code> if the key was found.</p>
+</section>
 
     
 </article>
@@ -504,7 +513,7 @@ iterable object, empty by default.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Keyset.php"><a href="files/src-keyset.html"><abbr title="src/Keyset.php">Keyset.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">307</span>
+    <span class="phpdocumentor-element-found-in__line">316</span>
 </aside>
 
     
@@ -520,7 +529,8 @@ iterable object, empty by default.</dd>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
     <span class="phpdocumentor-signature__response_type">int</span>
             &mdash;
-            <section class="phpdocumentor-description"></section>
+            <section class="phpdocumentor-description"><p>The number of keys in this keyset.</p>
+</section>
 
     
 </article>
@@ -537,7 +547,7 @@ iterable object, empty by default.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Keyset.php"><a href="files/src-keyset.html"><abbr title="src/Keyset.php">Keyset.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">44</span>
+    <span class="phpdocumentor-element-found-in__line">53</span>
 </aside>
 
         <p class="phpdocumentor-summary">Creates a new instance of the current `AnyArray` type from the supplied
@@ -568,7 +578,8 @@ current <code class="prettyprint">AnyArray</code>.</p>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
     <span class="phpdocumentor-signature__response_type">static</span>
             &mdash;
-            <section class="phpdocumentor-description"></section>
+            <section class="phpdocumentor-description"><p>A new instance.</p>
+</section>
 
     
 </article>
@@ -585,13 +596,13 @@ current <code class="prettyprint">AnyArray</code>.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Keyset.php"><a href="files/src-keyset.html"><abbr title="src/Keyset.php">Keyset.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">247</span>
+    <span class="phpdocumentor-element-found-in__line">256</span>
 </aside>
 
     
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">current</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string|int</span></code>
+                <span class="phpdocumentor-signature__name">current</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -599,9 +610,10 @@ current <code class="prettyprint">AnyArray</code>.</p>
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">string|int</span>
+    <span class="phpdocumentor-signature__response_type">mixed</span>
             &mdash;
-            <section class="phpdocumentor-description"></section>
+            <section class="phpdocumentor-description"><p>The current value.</p>
+</section>
 
     
 </article>
@@ -618,7 +630,7 @@ current <code class="prettyprint">AnyArray</code>.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Keyset.php"><a href="files/src-keyset.html"><abbr title="src/Keyset.php">Keyset.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">94</span>
+    <span class="phpdocumentor-element-found-in__line">103</span>
 </aside>
 
         <p class="phpdocumentor-summary">Checks if two keysets contain the same values.</p>
@@ -636,7 +648,8 @@ current <code class="prettyprint">AnyArray</code>.</p>
                 : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Zheltikov-Arrays-Keyset.html"><abbr title="\Zheltikov\Arrays\Keyset">Keyset</abbr></a></span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"></section>
+                    <section class="phpdocumentor-description"><p>The first keyset.</p>
+</section>
 
             </dd>
                     <dt class="phpdocumentor-argument-list__entry">
@@ -644,7 +657,8 @@ current <code class="prettyprint">AnyArray</code>.</p>
                 : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Zheltikov-Arrays-Keyset.html"><abbr title="\Zheltikov\Arrays\Keyset">Keyset</abbr></a></span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"></section>
+                    <section class="phpdocumentor-description"><p>The second keyset.</p>
+</section>
 
             </dd>
             </dl>
@@ -654,7 +668,8 @@ current <code class="prettyprint">AnyArray</code>.</p>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
     <span class="phpdocumentor-signature__response_type">bool</span>
             &mdash;
-            <section class="phpdocumentor-description"></section>
+            <section class="phpdocumentor-description"><p>The comparison result, <code class="prettyprint">true</code> if both keysets are equal.</p>
+</section>
 
     
 </article>
@@ -671,7 +686,7 @@ current <code class="prettyprint">AnyArray</code>.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Keyset.php"><a href="files/src-keyset.html"><abbr title="src/Keyset.php">Keyset.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">261</span>
+    <span class="phpdocumentor-element-found-in__line">270</span>
 </aside>
 
     
@@ -687,7 +702,8 @@ current <code class="prettyprint">AnyArray</code>.</p>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
     <span class="phpdocumentor-signature__response_type">string|int|null</span>
             &mdash;
-            <section class="phpdocumentor-description"></section>
+            <section class="phpdocumentor-description"><p>The current key.</p>
+</section>
 
     
 </article>
@@ -704,7 +720,7 @@ current <code class="prettyprint">AnyArray</code>.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Keyset.php"><a href="files/src-keyset.html"><abbr title="src/Keyset.php">Keyset.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">117</span>
+    <span class="phpdocumentor-element-found-in__line">126</span>
 </aside>
 
         <p class="phpdocumentor-summary">Checks if two keysets contain the same values, and in the same order.</p>
@@ -723,7 +739,8 @@ current <code class="prettyprint">AnyArray</code>.</p>
                 : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Zheltikov-Arrays-Keyset.html"><abbr title="\Zheltikov\Arrays\Keyset">Keyset</abbr></a></span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"></section>
+                    <section class="phpdocumentor-description"><p>The first keyset.</p>
+</section>
 
             </dd>
                     <dt class="phpdocumentor-argument-list__entry">
@@ -731,7 +748,8 @@ current <code class="prettyprint">AnyArray</code>.</p>
                 : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Zheltikov-Arrays-Keyset.html"><abbr title="\Zheltikov\Arrays\Keyset">Keyset</abbr></a></span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"></section>
+                    <section class="phpdocumentor-description"><p>The second keyset.</p>
+</section>
 
             </dd>
             </dl>
@@ -741,7 +759,8 @@ current <code class="prettyprint">AnyArray</code>.</p>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
     <span class="phpdocumentor-signature__response_type">bool</span>
             &mdash;
-            <section class="phpdocumentor-description"></section>
+            <section class="phpdocumentor-description"><p>The comparison result, <code class="prettyprint">true</code> if both keysets are identical.</p>
+</section>
 
     
 </article>
@@ -758,7 +777,7 @@ current <code class="prettyprint">AnyArray</code>.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Keyset.php"><a href="files/src-keyset.html"><abbr title="src/Keyset.php">Keyset.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">266</span>
+    <span class="phpdocumentor-element-found-in__line">275</span>
 </aside>
 
     
@@ -790,7 +809,7 @@ current <code class="prettyprint">AnyArray</code>.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Keyset.php"><a href="files/src-keyset.html"><abbr title="src/Keyset.php">Keyset.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">168</span>
+    <span class="phpdocumentor-element-found-in__line">177</span>
 </aside>
 
     
@@ -807,7 +826,8 @@ current <code class="prettyprint">AnyArray</code>.</p>
                 : <span class="phpdocumentor-signature__argument__return-type">string|int</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"></section>
+                    <section class="phpdocumentor-description"><p>The key to check.</p>
+</section>
 
             </dd>
             </dl>
@@ -817,7 +837,8 @@ current <code class="prettyprint">AnyArray</code>.</p>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
     <span class="phpdocumentor-signature__response_type">bool</span>
             &mdash;
-            <section class="phpdocumentor-description"></section>
+            <section class="phpdocumentor-description"><p>The check result, <code class="prettyprint">true</code> if the key exists.</p>
+</section>
 
     
 </article>
@@ -834,7 +855,7 @@ current <code class="prettyprint">AnyArray</code>.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Keyset.php"><a href="files/src-keyset.html"><abbr title="src/Keyset.php">Keyset.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">183</span>
+    <span class="phpdocumentor-element-found-in__line">192</span>
 </aside>
 
     
@@ -851,7 +872,8 @@ current <code class="prettyprint">AnyArray</code>.</p>
                 : <span class="phpdocumentor-signature__argument__return-type">string|int</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"></section>
+                    <section class="phpdocumentor-description"><p>The key to query.</p>
+</section>
 
             </dd>
             </dl>
@@ -861,7 +883,8 @@ current <code class="prettyprint">AnyArray</code>.</p>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
     <span class="phpdocumentor-signature__response_type">mixed</span>
             &mdash;
-            <section class="phpdocumentor-description"></section>
+            <section class="phpdocumentor-description"><p>The value at the specified key.</p>
+</section>
 
     
 </article>
@@ -878,7 +901,7 @@ current <code class="prettyprint">AnyArray</code>.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Keyset.php"><a href="files/src-keyset.html"><abbr title="src/Keyset.php">Keyset.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">211</span>
+    <span class="phpdocumentor-element-found-in__line">220</span>
 </aside>
 
         <p class="phpdocumentor-summary">Adds a value to this `Keyset`.</p>
@@ -899,7 +922,8 @@ thrown, this is because keysets do not support appending values.</p>
                 : <span class="phpdocumentor-signature__argument__return-type">null</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"></section>
+                    <section class="phpdocumentor-description"><p>The key at which to set the value.</p>
+</section>
 
             </dd>
                     <dt class="phpdocumentor-argument-list__entry">
@@ -907,7 +931,8 @@ thrown, this is because keysets do not support appending values.</p>
                 : <span class="phpdocumentor-signature__argument__return-type">string|int</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"></section>
+                    <section class="phpdocumentor-description"><p>The value to set.</p>
+</section>
 
             </dd>
             </dl>
@@ -934,7 +959,7 @@ thrown, this is because keysets do not support appending values.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Keyset.php"><a href="files/src-keyset.html"><abbr title="src/Keyset.php">Keyset.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">230</span>
+    <span class="phpdocumentor-element-found-in__line">239</span>
 </aside>
 
     
@@ -951,7 +976,8 @@ thrown, this is because keysets do not support appending values.</p>
                 : <span class="phpdocumentor-signature__argument__return-type">string|int</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"></section>
+                    <section class="phpdocumentor-description"><p>The key to remove.</p>
+</section>
 
             </dd>
             </dl>
@@ -978,7 +1004,7 @@ thrown, this is because keysets do not support appending values.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Keyset.php"><a href="files/src-keyset.html"><abbr title="src/Keyset.php">Keyset.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">284</span>
+    <span class="phpdocumentor-element-found-in__line">293</span>
 </aside>
 
     
@@ -1010,7 +1036,7 @@ thrown, this is because keysets do not support appending values.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Keyset.php"><a href="files/src-keyset.html"><abbr title="src/Keyset.php">Keyset.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">52</span>
+    <span class="phpdocumentor-element-found-in__line">61</span>
 </aside>
 
         <p class="phpdocumentor-summary">Converts the current `AnyArray` to a plain PHP array.</p>
@@ -1027,7 +1053,8 @@ thrown, this is because keysets do not support appending values.</p>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
     <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span>
             &mdash;
-            <section class="phpdocumentor-description"></section>
+            <section class="phpdocumentor-description"><p>A plain PHP array with the same values as this container.</p>
+</section>
 
     
 </article>
@@ -1044,7 +1071,7 @@ thrown, this is because keysets do not support appending values.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Keyset.php"><a href="files/src-keyset.html"><abbr title="src/Keyset.php">Keyset.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">149</span>
+    <span class="phpdocumentor-element-found-in__line">158</span>
 </aside>
 
         <p class="phpdocumentor-summary">Combines several keysets into a new one.</p>
@@ -1062,7 +1089,8 @@ thrown, this is because keysets do not support appending values.</p>
                 : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Zheltikov-Arrays-Keyset.html"><abbr title="\Zheltikov\Arrays\Keyset">Keyset</abbr></a></span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"></section>
+                    <section class="phpdocumentor-description"><p>The first keyset.</p>
+</section>
 
             </dd>
                     <dt class="phpdocumentor-argument-list__entry">
@@ -1070,7 +1098,8 @@ thrown, this is because keysets do not support appending values.</p>
                 : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Zheltikov-Arrays-Keyset.html"><abbr title="\Zheltikov\Arrays\Keyset">Keyset</abbr></a></span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"></section>
+                    <section class="phpdocumentor-description"><p>The other keysets.</p>
+</section>
 
             </dd>
             </dl>
@@ -1080,7 +1109,8 @@ thrown, this is because keysets do not support appending values.</p>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
     <span class="phpdocumentor-signature__response_type">static</span>
             &mdash;
-            <section class="phpdocumentor-description"></section>
+            <section class="phpdocumentor-description"><p>A new combined keyset.</p>
+</section>
 
     
 </article>
@@ -1097,7 +1127,7 @@ thrown, this is because keysets do not support appending values.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Keyset.php"><a href="files/src-keyset.html"><abbr title="src/Keyset.php">Keyset.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">297</span>
+    <span class="phpdocumentor-element-found-in__line">306</span>
 </aside>
 
     
@@ -1113,7 +1143,8 @@ thrown, this is because keysets do not support appending values.</p>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
     <span class="phpdocumentor-signature__response_type">bool</span>
             &mdash;
-            <section class="phpdocumentor-description"></section>
+            <section class="phpdocumentor-description"><p>The check result, <code class="prettyprint">true</code> if the current key is valid.</p>
+</section>
 
     
 </article>
@@ -1130,7 +1161,7 @@ thrown, this is because keysets do not support appending values.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Keyset.php"><a href="files/src-keyset.html"><abbr title="src/Keyset.php">Keyset.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">34</span>
+    <span class="phpdocumentor-element-found-in__line">43</span>
 </aside>
 
         <p class="phpdocumentor-summary">Keyset constructor.</p>
@@ -1148,7 +1179,8 @@ thrown, this is because keysets do not support appending values.</p>
                 : <span class="phpdocumentor-signature__argument__return-type">iteratable&lt;string|int, mixed&gt;|array&lt;string|int, mixed&gt;</span>
                  = <span class="phpdocumentor-signature__argument__default-value">[]</span>            </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"></section>
+                    <section class="phpdocumentor-description"><p>The initial data.</p>
+</section>
 
             </dd>
             </dl>
