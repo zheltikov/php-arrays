@@ -7,29 +7,37 @@ use OutOfBoundsException;
 use Zheltikov\Exceptions\InvalidOperationException;
 
 /**
+ * An ordered, iterable data structure.
+ *
  * Class Vec
- * @package Zheltikov\Collections
+ * @package Zheltikov\Arrays
  */
 final class Vec implements AnyArray
 {
     /**
+     * The internal array that is used to store the data.
+     *
      * @var array
      */
     private array $array = [];
 
     /**
+     * The current key of the iterator.
+     *
      * @var int
      */
     private int $current_key = 0;
 
     /**
+     * The length of this vec.
+     *
      * @var int
      */
     private int $count = 0;
 
     /**
      * Vec constructor.
-     * @param iterable|array $input
+     * @param iterable|array $input The initial data.
      */
     private function __construct(iterable $input = [])
     {
@@ -39,7 +47,7 @@ final class Vec implements AnyArray
     }
 
     /**
-     * @return static
+     * @return static A new instance.
      */
     public static function create(iterable $input = []): self
     {
@@ -47,7 +55,7 @@ final class Vec implements AnyArray
     }
 
     /**
-     * @return array
+     * @return array A plain PHP array with the same values as this container.
      */
     public function toArray(): array
     {
@@ -55,8 +63,8 @@ final class Vec implements AnyArray
     }
 
     /**
-     * @param mixed $value
-     * @return bool
+     * @param mixed $value The value to search.
+     * @return bool The search result, `true` if the value was found.
      */
     public function contains($value): bool
     {
@@ -70,8 +78,8 @@ final class Vec implements AnyArray
     }
 
     /**
-     * @param int $key
-     * @return bool
+     * @param int $key The index to search.
+     * @return bool The search result, `true` if the index was found.
      */
     public function containsKey($key): bool
     {
@@ -82,9 +90,9 @@ final class Vec implements AnyArray
      * Checks if two vecs are equal.
      * Elements are strictly compared.
      *
-     * @param \Zheltikov\Arrays\Vec $a
-     * @param \Zheltikov\Arrays\Vec $b
-     * @return bool
+     * @param \Zheltikov\Arrays\Vec $a The first vec.
+     * @param \Zheltikov\Arrays\Vec $b The second vec.
+     * @return bool The comparison result, `true` if both vecs are equal.
      */
     public static function equal(self $a, self $b): bool
     {
@@ -104,9 +112,9 @@ final class Vec implements AnyArray
     /**
      * Combines several vecs into a new one.
      *
-     * @param \Zheltikov\Arrays\Vec $first
-     * @param \Zheltikov\Arrays\Vec ...$rest
-     * @return static
+     * @param \Zheltikov\Arrays\Vec $first The first vec.
+     * @param \Zheltikov\Arrays\Vec ...$rest The other vecs.
+     * @return static A new combined vecs.
      */
     public static function concat(self $first, self ...$rest): self
     {
@@ -124,8 +132,8 @@ final class Vec implements AnyArray
     /**
      * Creates a new Vec containing the keys of the input iterable.
      *
-     * @param iterable $input
-     * @return static
+     * @param iterable $input The input iterable.
+     * @return static A new vec containing the keys of the iterable.
      */
     public static function keys(iterable $input): self
     {
@@ -148,8 +156,8 @@ final class Vec implements AnyArray
      *
      * {@inheritDoc}
      *
-     * @param int $offset
-     * @return bool
+     * @param int $offset The key to check.
+     * @return bool The check result, `true` if the key exists.
      */
     public function offsetExists($offset): bool
     {
@@ -170,8 +178,8 @@ final class Vec implements AnyArray
      *
      * {@inheritDoc}
      *
-     * @param int $offset
-     * @return mixed
+     * @param int $offset The key to query.
+     * @return mixed The value at the specified key.
      */
     public function offsetGet($offset)
     {
@@ -196,8 +204,8 @@ final class Vec implements AnyArray
      *
      * {@inheritDoc}
      *
-     * @param int|null $offset
-     * @param mixed $value
+     * @param int|null $offset The key at which to set the value.
+     * @param mixed $value The value to set.
      */
     public function offsetSet($offset, $value): void
     {
@@ -230,7 +238,7 @@ final class Vec implements AnyArray
      *
      * {@inheritDoc}
      *
-     * @param int $offset
+     * @param int $offset The key to remove.
      */
     public function offsetUnset($offset): void
     {
@@ -262,7 +270,7 @@ final class Vec implements AnyArray
     // -------------------------------------------------------------------------
 
     /**
-     * @return mixed
+     * @return mixed The current value.
      */
     public function current()
     {
@@ -276,7 +284,7 @@ final class Vec implements AnyArray
     }
 
     /**
-     * @return int
+     * @return int The current key.
      */
     public function key(): int
     {
@@ -294,7 +302,7 @@ final class Vec implements AnyArray
     }
 
     /**
-     * @return bool
+     * @return bool The check result, `true` if the current key is valid.
      */
     public function valid(): bool
     {
@@ -304,7 +312,7 @@ final class Vec implements AnyArray
     // -------------------------------------------------------------------------
 
     /**
-     * @return int
+     * @return int The number of elements in this vec.
      */
     public function count(): int
     {

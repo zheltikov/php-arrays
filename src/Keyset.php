@@ -7,29 +7,38 @@ use OutOfBoundsException;
 use Zheltikov\Exceptions\InvalidOperationException;
 
 /**
+ * An ordered data structure without duplicates. It can only contain `string` or
+ * `int` values.
+ *
  * Class Keyset
- * @package Zheltikov\Collections
+ * @package Zheltikov\Arrays
  */
 final class Keyset implements AnyArray
 {
     /**
+     * The internal array that is used to store the data.
+     *
      * @var array
      */
     private array $array = [];
 
     /**
+     * The current key of the iterator.
+     *
      * @var string|int|null
      */
     private $current_key = null;
 
     /**
+     * The number of elements in this keyset.
+     *
      * @var int|null
      */
     private ?int $count = null;
 
     /**
      * Keyset constructor.
-     * @param iterable|array $input
+     * @param iterable|array $input The initial data.
      */
     private function __construct(iterable $input = [])
     {
@@ -39,7 +48,7 @@ final class Keyset implements AnyArray
     }
 
     /**
-     * @return static
+     * @return static A new instance.
      */
     public static function create(iterable $input = []): self
     {
@@ -47,7 +56,7 @@ final class Keyset implements AnyArray
     }
 
     /**
-     * @return array
+     * @return array A plain PHP array with the same values as this container.
      */
     public function toArray(): array
     {
@@ -61,8 +70,8 @@ final class Keyset implements AnyArray
      *
      * {@inheritDoc}
      *
-     * @param mixed $value
-     * @return bool
+     * @param mixed $value The value to search.
+     * @return bool The search result, `true` if the value was found.
      */
     public function contains($value): bool
     {
@@ -76,8 +85,8 @@ final class Keyset implements AnyArray
      *
      * {@inheritDoc}
      *
-     * @param string|int $key
-     * @return bool
+     * @param string|int $key The key to search.
+     * @return bool The search result, `true` if the key was found.
      */
     public function containsKey($key): bool
     {
@@ -87,9 +96,9 @@ final class Keyset implements AnyArray
     /**
      * Checks if two keysets contain the same values.
      *
-     * @param \Zheltikov\Arrays\Keyset $a
-     * @param \Zheltikov\Arrays\Keyset $b
-     * @return bool
+     * @param \Zheltikov\Arrays\Keyset $a The first keyset.
+     * @param \Zheltikov\Arrays\Keyset $b The second keyset.
+     * @return bool The comparison result, `true` if both keysets are equal.
      */
     public static function equal(self $a, self $b): bool
     {
@@ -110,9 +119,9 @@ final class Keyset implements AnyArray
      * Checks if two keysets contain the same values, and in the same order.
      * Elements are strictly compared.
      *
-     * @param \Zheltikov\Arrays\Keyset $a
-     * @param \Zheltikov\Arrays\Keyset $b
-     * @return bool
+     * @param \Zheltikov\Arrays\Keyset $a The first keyset.
+     * @param \Zheltikov\Arrays\Keyset $b The second keyset.
+     * @return bool The comparison result, `true` if both keysets are identical.
      */
     public static function match(self $a, self $b): bool
     {
@@ -142,9 +151,9 @@ final class Keyset implements AnyArray
     /**
      * Combines several keysets into a new one.
      *
-     * @param \Zheltikov\Arrays\Keyset $first
-     * @param \Zheltikov\Arrays\Keyset ...$rest
-     * @return static
+     * @param \Zheltikov\Arrays\Keyset $first The first keyset.
+     * @param \Zheltikov\Arrays\Keyset ...$rest The other keysets.
+     * @return static A new combined keyset.
      */
     public static function union(self $first, self ...$rest): self
     {
@@ -162,8 +171,8 @@ final class Keyset implements AnyArray
     // -------------------------------------------------------------------------
 
     /**
-     * @param string|int $offset
-     * @return bool
+     * @param string|int $offset The key to check.
+     * @return bool The check result, `true` if the key exists.
      */
     public function offsetExists($offset): bool
     {
@@ -177,8 +186,8 @@ final class Keyset implements AnyArray
     }
 
     /**
-     * @param string|int $offset
-     * @return mixed
+     * @param string|int $offset The key to query.
+     * @return mixed The value at the specified key.
      */
     public function offsetGet($offset)
     {
@@ -205,8 +214,8 @@ final class Keyset implements AnyArray
      *
      * {@inheritDoc}
      *
-     * @param null $offset
-     * @param string|int $value
+     * @param null $offset The key at which to set the value.
+     * @param string|int $value The value to set.
      */
     public function offsetSet($offset, $value): void
     {
@@ -225,7 +234,7 @@ final class Keyset implements AnyArray
     }
 
     /**
-     * @param string|int $offset
+     * @param string|int $offset The key to remove.
      */
     public function offsetUnset($offset): void
     {
@@ -242,7 +251,7 @@ final class Keyset implements AnyArray
     // -------------------------------------------------------------------------
 
     /**
-     * @return string|int
+     * @return mixed The current value.
      */
     public function current()
     {
@@ -256,7 +265,7 @@ final class Keyset implements AnyArray
     }
 
     /**
-     * @return string|int|null
+     * @return string|int|null The current key.
      */
     public function key()
     {
@@ -292,7 +301,7 @@ final class Keyset implements AnyArray
     }
 
     /**
-     * @return bool
+     * @return bool The check result, `true` if the current key is valid.
      */
     public function valid(): bool
     {
@@ -302,7 +311,7 @@ final class Keyset implements AnyArray
     // -------------------------------------------------------------------------
 
     /**
-     * @return int
+     * @return int The number of keys in this keyset.
      */
     public function count(): int
     {
