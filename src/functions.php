@@ -3,8 +3,10 @@
 namespace Zheltikov\Arrays;
 
 /**
- * @param iterable $arr
- * @return \Zheltikov\Arrays\Dict
+ * Shorthand function to create a new dict.
+ *
+ * @param iterable $arr The input initial data.
+ * @return \Zheltikov\Arrays\Dict A new dict.
  */
 function dict(iterable $arr = []): Dict
 {
@@ -12,8 +14,10 @@ function dict(iterable $arr = []): Dict
 }
 
 /**
- * @param iterable $arr
- * @return \Zheltikov\Arrays\Keyset
+ * Shorthand function to create a new keyset.
+ *
+ * @param iterable $arr The input initial data.
+ * @return \Zheltikov\Arrays\Keyset A new keyset.
  */
 function keyset(iterable $arr = []): Keyset
 {
@@ -21,8 +25,10 @@ function keyset(iterable $arr = []): Keyset
 }
 
 /**
- * @param iterable $arr
- * @return \Zheltikov\Arrays\Vec
+ * Shorthand function to create a new vec.
+ *
+ * @param iterable $arr The input initial data.
+ * @return \Zheltikov\Arrays\Vec A new vec.
  */
 function vec(iterable $arr = []): Vec
 {
