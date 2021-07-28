@@ -133,17 +133,17 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Zheltikov\\Arrays\\dict\u0028\u0029",
             "name": "dict",
-            "summary": "",
+            "summary": "Shorthand\u0020function\u0020to\u0020create\u0020a\u0020new\u0020dict.",
             "url": "namespaces/zheltikov-arrays.html#function_dict"
         },                {
             "fqsen": "\\Zheltikov\\Arrays\\keyset\u0028\u0029",
             "name": "keyset",
-            "summary": "",
+            "summary": "Shorthand\u0020function\u0020to\u0020create\u0020a\u0020new\u0020keyset.",
             "url": "namespaces/zheltikov-arrays.html#function_keyset"
         },                {
             "fqsen": "\\Zheltikov\\Arrays\\vec\u0028\u0029",
             "name": "vec",
-            "summary": "",
+            "summary": "Shorthand\u0020function\u0020to\u0020create\u0020a\u0020new\u0020vec.",
             "url": "namespaces/zheltikov-arrays.html#function_vec"
         },                {
             "fqsen": "\\Zheltikov\\Arrays\\KeyedTraversable",
